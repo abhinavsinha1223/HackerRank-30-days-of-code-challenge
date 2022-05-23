@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int t, i;
+        String po = "", so = "";
+        t = sc.nextInt();
+        while (t > 0) {
+            String s = sc.next();
+
+            for (i = 0; i < s.length(); i++) {
+                if (i % 2 == 0) {
+                    po = po + (s.charAt(i));
+                } else if (i % 2 != 0) {
+                    so = so + (s.charAt(i));
+                }
+            }
+            System.out.println(po + " " + so);
+
+            po = "";
+            so = "";
+            t--;
+        }
+    }
+}
